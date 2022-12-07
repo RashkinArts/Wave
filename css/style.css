@@ -528,6 +528,7 @@ a {
 	flex-wrap: wrap;
 	margin-bottom: 60px;
 	gap: 30px;
+	justify-content: center;
 }
 
 .podcasts__item {
@@ -2818,7 +2819,7 @@ a {
 
 	}
 
-	@media (max-width: 982px) {
+	@media (max-width: 812px) {
 		.us__arrow_next {
 			display: none;
 		}
@@ -2958,6 +2959,7 @@ a {
 
 		.container__btn_menu320 {
 			padding: 0;
+			max-width: none;
 		}
 
 		.header__menu320 {
@@ -2980,6 +2982,8 @@ a {
 			transform: none;
 			box-shadow: 0 0 3px #A1A6B4;
 			background: #fff;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 
 		.block-header__menu320_btn {
@@ -2990,6 +2994,7 @@ a {
 			position: relative;
 			padding-left: 30px;
 			padding-top: 9px;
+			flex-basis: 50%;
 		}
 
 		.header__menu320_btn {
