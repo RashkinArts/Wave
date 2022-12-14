@@ -1250,12 +1250,10 @@ a {
   }
 
   .guests__right__img {
-	  background-image: url('../img/guests1.png');
-	  max-width: 350px;
-	  width: 100%;
-	  height: 220px;
-	  margin-bottom: 11px;
-  }
+	max-width: 350px;
+	max-height: 220px;
+	margin-bottom: 11px;
+}
 
   .guests__right__img2 {
 	  background-image: url('../img/Kapkov.jpg');
