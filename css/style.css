@@ -536,6 +536,11 @@ a {
 	width: 100%;
 	height: 140px;
 	background-color: #fff;
+	display: none;
+}
+
+.podcasts__item.is_active {
+	display: block;
 }
 
 .podcasts__item__block {
@@ -701,23 +706,6 @@ a {
 
 .podcasts__btn {
 	text-align: center;
-}
-
-.more_podcasts1 {
-	display: none;
-}
-.more_podcasts2 {
-	display: none;
-}
-.more_podcasts3 {
-	display: none;
-}
-.more_podcasts4 {
-	display: none;
-}
-
-.more_podcasts.is_active {
-	display: block;
 }
 
 .podcasts__btn_info:hover {
@@ -2576,10 +2564,8 @@ a {
 			width: 100%;
 			background-color: #D2D5DD;
 			z-index: 10;
-			padding-left: 95px;
 			padding-top: 130px;
 			box-shadow: 0 0 5px #A1A6B4;
-			overflow-y: auto;
 			visibility: hidden;
 			transform: translateX(-120%);
 			transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -2602,7 +2588,6 @@ a {
 			height: 188px;
 			gap: 50px;
 			justify-content: space-around;
-			position: absolute;
 			right: 57%;
 		}
 
@@ -2635,7 +2620,6 @@ a {
 		.burger {
 			display: block;
 			z-index: 15;
-			position: relative;
 			transform: rotate(0deg);
 			transition: .5s ease-in-out;
 			cursor: pointer;
@@ -3312,6 +3296,10 @@ a {
 			font-size: 16px;
 		}
 
+		.podcasts__list {
+			margin-bottom: 30px;
+		}
+
 		.podcasts__item__creator {
 			font-size: 12px;
 			padding-top: 0;
@@ -3354,7 +3342,7 @@ a {
 
 		.podcasts__btn_info {
 			font-size: 16px;
-			padding: 15px 35px 15px 35px ;
+			padding: 12px 25px 12px 25px ;
 		}
 
 		.broadcast__info__text_right {
@@ -3422,7 +3410,7 @@ a {
 
 		.broadcast__info {
 			padding-top: 30px;
-			height: 180px;
+			height: 140px;
 		}
 
 		.choices__inner {
@@ -3435,11 +3423,20 @@ a {
 		}
 
 		.broadcast {
-			padding: 30px 0;
+			padding-top: 45px;
+			padding-bottom: 10px;
 		}
 
 		.broadcast__info {
 			padding-top: 0;
+		}
+
+		.broadcast__info__left {
+		    padding-top: 5px;
+	    }
+
+		.choices__inner {
+			font-size: 16px;
 		}
 
 		.broadcast__info_icon_block {
@@ -3452,9 +3449,10 @@ a {
 		.broadcast__info__text {
 			font-size: 14px;
 			max-width: 166px;
-			margin-bottom: 40px;
+			margin-bottom: 20px;
 			margin-top: 0px;
 			height: 63px;
+			line-height: 21px;
 		}
 
 		.broadcast__info__link {
@@ -3464,30 +3462,64 @@ a {
 		}
 
 		.broadcast__info__bottom_768 {
-			padding-bottom: 25px;
+			padding-bottom: 0px;
+			padding-top: 25px;
+		}
+
+		.broadcast__info__time_320 {
+			margin-bottom: 8px;
+		}
+
+		.broadcast__info__list {
+			gap: 25px 30px;
+		}
+
+		.broadcast__info__link_right {
+			color: #6D31EE;
+			background-image: url('../img/Arrow\ 2.svg');
 		}
 
 		.guests {
-			padding: 30px 0;
+			padding-top: 50px;
+			padding-bottom: 60px;
 		}
 
 		.container_accordion {
 			padding-top: 0px;
-			padding-bottom: 20px;
+			padding-bottom: 35px;
 		}
 
 		.guests__head {
 			font-size: 24px;
+			line-height: 24px;
+			margin-bottom: 8px;
+		}
+
+		.guests__right__link__icon {
+			width: 36px;
+			height: 36px;
+		}
+
+		.guests__right__icon {
+			margin-right: 15px;
+		}
+
+		.guests__right__btn {
+			padding: 7px 15px;
 		}
 
 		.guests__title {
 			font-size: 14px;
+			line-height: 21px;
+			margin-bottom: 0px;
 		}
 
 		.guests__text {
 			font-size: 14px;
 			max-width: 356px;
 			width: 100%;
+			line-height: 22.4px;
+			margin-bottom: 30px;
 		}
 
 		.guests__accordion__head {
@@ -3496,6 +3528,11 @@ a {
 
 		.guests__accordion__info__item {
 			font-size: 14px;
+			max-width: 100px;
+		}
+
+		.guests__accordion__info {
+			margin-top: 15px;
 		}
 
 		.guests__right {
@@ -3505,11 +3542,17 @@ a {
 		.accordion_img {
 			width: 30px;
 			height: 30px;
-			top: 28px;
+			top: 14px;
+		}
+
+		.guests__accordion__head {
+			padding-top: 17px;
+			padding-bottom: 17px;
 		}
 
 		.playlist {
-			padding: 30px 0;
+			padding-top: 50px;
+			padding-bottom: 60px;
 		}
 
 		.playlist__head {
@@ -3539,7 +3582,7 @@ a {
 			overflow-x: auto;
 			position: absolute;
 			top: 0;
-			left: -15px;
+			left: 0px;
 			width: 100vw;
 			height: 55px;
 			gap: 10px;
@@ -3566,6 +3609,10 @@ a {
             appearance: none;
 		}
 
+		.playlist__right {
+			padding-top: 15px;
+		}
+
 		.playlist__label {
 		cursor: pointer;
 		padding: 10px 20px;
@@ -3573,6 +3620,14 @@ a {
 		border: 2px solid #6D31EE;
 		border-radius: 40px;
 	    }
+
+		.playlist__right__list {
+			margin-bottom: 30px;
+		}
+
+		.playlist__left_bot_1024 {
+			padding-top: 28px;
+		}
 
 		.playlist__input::after {
 		display: none;
@@ -3624,47 +3679,54 @@ a {
 		}
 
 		.yandex {
-			padding: 30px 0;
+			padding: 50px 0;
 		}
 
 		.yandex__container {
-			padding-top: 250px;
+			padding-top: 265px;
 		}
 
 		.yandex__head {
 			font-size: 24px;
 			line-height: 24px;
+			margin-bottom: 12px;
 		}
 
 		.yandex__text_top {
 			font-size: 14px;
 			line-height: 22.4px;
+			margin-bottom: 5px;
 		}
 
 		.yandex__text_bot {
 			font-size: 14px;
 			line-height: 22.4px;
+			margin-bottom: 10px;
 		}
 
 		.yandex__price {
 			font-size: 24px;
+			margin-bottom: 10px;
 		}
 
 		.yandex__link {
 			font-size: 16px;
+			padding: 15px 11px 15px 43px;
 		}
 
 		.us {
-			padding: 30px 0;
+			padding: 50px 0;
 		}
 
 		.us__top__info__head {
 			font-size: 24px;
+			margin-bottom: 0px;
 		}
 
 		.us__top__info__text_top {
 			font-size: 14px;
 			line-height: 21px;
+			margin-bottom: 0px;
 		}
 
 		.us__top__info__text_bot {
@@ -3672,8 +3734,20 @@ a {
 			line-height: 24.4px;
 		}
 
+		.us__top {
+			margin-bottom: 0px;
+		}
+
 		.us__top__img {
 			display: none;
+		}
+
+		.us__mid {
+			margin-bottom: 15px;
+		}
+
+		.us__mid__list__img {
+			margin-bottom: 0px;
 		}
 
 		.us__mid__item_card {
@@ -3691,9 +3765,26 @@ a {
 			line-height: 16px;
 		}
 
+		.box__form__input {
+			height: 45px;
+		}
+
+		.textarea {
+			margin-bottom: 35px;
+		}
+
+		.form__input {
+			font-size: 16px;
+		}
+
+		.form__input__left {
+			margin-bottom: 35px;
+		}
+
 		.form__btn {
 			font-size: 16px;
-			padding: 15px 54px;
+			padding: 15px 45px;
+			margin-bottom: 20px;
 		}
 
 		.form__label__checkbox {
@@ -3735,13 +3826,17 @@ a {
 
 		.foot_container320 {
 			background-color: #292E39;
-			height: 220px;
-			padding-top: 70px;
+			height: 190px;
+			padding-top: 60px;
 		}
 
 		.footer__container {
 			padding-top: 20px;
 			height: 160px;
+		}
+
+		.footer__icon {
+			
 		}
 
 	}

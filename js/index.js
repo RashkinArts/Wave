@@ -1,8 +1,24 @@
 
 //more_podcasts
 
-const morePodcasts = document.querySelectorAll('.more_podcasts');
+const morePodcasts = document.querySelectorAll('.podcasts__item');
 const moreBtn = document.querySelector('#more_podcasts_btn');
+
+const showPodcasts = (count) => {
+    for (let i = 0; i < count; i++) {
+      morePodcasts[i].classList.add('is_active');
+    }
+}
+
+const width = document.documentElement.offsetWidth;
+
+if (width > 1024) {
+  showPodcasts(8);
+}
+
+if (width < 768) {
+  showPodcasts(4);
+}
 
   moreBtn.addEventListener('click', function() {
     morePodcasts.forEach(function(card) {
