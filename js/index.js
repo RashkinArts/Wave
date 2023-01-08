@@ -110,14 +110,14 @@ new JustValidate('.js-form', {
 
 let burder = document.querySelector('.burger');
 let menu = document.querySelector('.header__nav');
-let menu2 = document.querySelector('.header__menu')
+let menu2 = document.querySelector('.header__menu');
 
-burder.addEventListener('click',
-function () {
-  burder.classList.toggle('burge_-active');
+burder.addEventListener('click',function () {
+  burder.classList.toggle('burger-active');
 
   menu.classList.toggle('header__nav--active');
   menu2.classList.toggle('header__nav--active');
+
 });
 
 let playBtn = document.querySelector('.icon_btn__play_320 ');
