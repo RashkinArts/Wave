@@ -2599,8 +2599,8 @@ a {
 		.burger-active
 		.burger__line_1 {
 			transform: rotate(45deg);
-			top: -3px;
-			left: 8px;
+			left: 1px;
+			top: 1px;
 		}
 		.burger-active
 		.burger__line_2 {
@@ -2610,8 +2610,6 @@ a {
 		.burger-active
 		.burger__line_3 {
 			transform: rotate(-45deg);
-			top: 14px;
-			left: 8px;
 		}
 
 
@@ -2623,36 +2621,68 @@ a {
 			padding-top: 18px;
 		}
 
-		.header__info {
+		.header__border-top {
 			position: relative;
-
 		}
 
 		.header__nav {
+			display: block;
 			position: absolute;
-			top: 60px;
-			height: 200px;
-			max-width: 800px;
-			width: 100%;
-			z-index: 5;
+			top: 0px;
+			left: 0px;
+			right: 0;
+			max-width: 100%;
+			z-index: 8;
+			visibility: hidden;
+			transform: translateX(-120%);
+			transition: visibility .5s ease-in-out, transform .5s ease-in-out;
+			
 		}
 
-		.header__nav--active {
-			background-color: #F2F2F2;
-			height: 100vh;
+		.header__nav::after {
+			content: '';
+			position: absolute;
+			background-image: url('../img/spiral_768.svg');
+			height: 315px;
+			width: 114px;
+			top: -60px;
+			right: 90px;
+		} 
 
-		}
+		.header__nav::before {
+			content: '';
+			position: absolute;
+			background-image: url('../img/spiral_768_bot.svg');
+			height: 315px;
+			width: 114px;
+			bottom: 0px;
+			right: 230px;
+		} 
 
 		.header__nav__list {
 			display: flex;
+			flex-direction: column;
 			flex-wrap: wrap;
-			gap: 50px;
-			height: 150px;
-			width: 300px;
+			justify-content: space-between;
+			align-content: flex-start;
+			gap: 64px 48px;
+			max-height: 188px;
+			max-width: 570px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 15px;
+			z-index: 8;
 		}
 
 		.header__nav__item {
 			padding: 0;
+		}
+
+		.header__nav--active {
+			background-color: #F2F2F2;
+			padding: 106px 0;
+			visibility: visible;
+			transform: none;
 		}
 
 		.btn__play_768px {
@@ -2948,7 +2978,16 @@ a {
 		}
 
 		.header__top {
-		height: 55px;}
+		height: 55px;
+	    }
+
+		.header__nav::after {
+			display: none;
+		}
+
+		.header__nav::before {
+			display: none;
+		}
 
 		.header__btn_320px {
 			display: block;
@@ -2980,23 +3019,18 @@ a {
 			margin-top: 0px;
 		}
 
-		.spiral-bot {
-			display: none;
-		}
-
-		.spiral-top {
-			display: none;
-		}
-
 		.header__nav__list {
-			height: 160px;
-			position: static;
+			padding: 0px;
+		}
+
+		.header__nav {
+			padding: 61px 32px 24px 32px;
 		}
 
 		.header__menu {
 			display: block;
 			position: absolute;
-			top: 350px;
+			top: 325px;
 			left: 0;
 			height: 60vh;
 			max-width: 986px;
@@ -3006,10 +3040,9 @@ a {
 			padding-left: 35px;
 			padding-top: 50px;
 			box-shadow: 0 0 5px #A1A6B4;
-			overflow-y: auto;
 			visibility: hidden;
 			transform: translateX(-120%);
-			transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+			transition: visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
 		}
 
 		.header__nav--active {
@@ -3091,9 +3124,9 @@ a {
 			display: flex;
 			justify-content: space-between;
 			position: absolute;
-			top: 150px;
+			top: 153px;
 			left: 0px;
-			z-index: 50;
+			z-index: 5;
 			overflow-y: auto;
 			visibility: hidden;
 			transform: translateX(-170%);
