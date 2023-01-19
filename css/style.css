@@ -2636,7 +2636,14 @@ a {
 			visibility: hidden;
 			transform: translateX(-120%);
 			transition: visibility .5s ease-in-out, transform .5s ease-in-out;
+			background-color: #F2F2F2;
+			padding: 106px 0;
 			
+		}
+
+		.header__nav--active {
+			visibility: visible;
+			transform: none;
 		}
 
 		.header__nav::after {
@@ -2678,12 +2685,6 @@ a {
 			padding: 0;
 		}
 
-		.header__nav--active {
-			background-color: #F2F2F2;
-			padding: 106px 0;
-			visibility: visible;
-			transform: none;
-		}
 
 		.btn__play_768px {
 			display: block;
@@ -2967,7 +2968,6 @@ a {
 	@media (max-width: 580px) {
 		.container {
 			max-width: 456px;
-			width: 100%;
 			padding: 0 32px;
 			margin: 0 auto;
 		}
@@ -3020,11 +3020,13 @@ a {
 		}
 
 		.header__nav__list {
-			padding: 0px;
+			max-width: 456px;
+			padding: 0 32px;
+			margin: 0 auto;
 		}
 
 		.header__nav {
-			padding: 61px 32px 24px 32px;
+			padding: 61px 0px 24px 0px;
 		}
 
 		.header__menu {
@@ -3037,12 +3039,11 @@ a {
 			width: 100%;
 			background-color: #fff;
 			z-index: 11;
-			padding-left: 35px;
-			padding-top: 50px;
 			box-shadow: 0 0 5px #A1A6B4;
 			visibility: hidden;
 			transform: translateX(-120%);
 			transition: visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+			padding: 40px 0;
 		}
 
 		.header__nav--active {
@@ -3065,8 +3066,9 @@ a {
 			flex-direction: column;
 			justify-content: space-between;
 			flex-wrap: wrap;
-			max-width: 100px;
-			width: 100%;
+			max-width: 456px;
+			padding: 0 32px;
+			margin: 0 auto;
 			height: 150px;
 		}
 
@@ -3133,9 +3135,6 @@ a {
 			transition: visibility .3s ease-in-out, transform .3s ease-in-out;
 		}
 
-		.header__nav {
-			padding-left: 35px;
-		}
 
 		.header__menu320--active {
 			visibility: visible;
